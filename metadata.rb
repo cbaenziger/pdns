@@ -6,8 +6,7 @@ description      'Installs/Configures pdns'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '1.0.5'
 
-supports 'ubuntu', '= 12.04'
-supports 'ubuntu', '= 14.04'
+supports 'ubuntu', '= 18.04'
 
 depends 'apt'
 depends 'build-essential'
