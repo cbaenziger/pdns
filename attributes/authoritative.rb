@@ -31,7 +31,6 @@ default['pdns']['authoritative']['package']['backends'] = %w( gsqlite3 )
 
 default['pdns']['authoritative']['config']['config-dir'] =
   node['pdns']['authoritative']['config_dir']
-default['pdns']['authoritative']['config']['allow_recursion'] = [ '127.0.0.1' ]
 default['pdns']['authoritative']['config']['daemon'] = true
 default['pdns']['authoritative']['config']['disable_axfr'] = true
 default['pdns']['authoritative']['config']['guardian'] = true
