@@ -5,14 +5,14 @@
 
 directory node['pdns']['authoritative']['config_dir'] do
   owner node['pdns']['user']
-  group node['pdns']['group']
+  group 'root'
   mode 0750
 end
 
 template "#{node['pdns']['authoritative']['config_dir']}/pdns.conf" do
   source 'authoritative.conf.erb'
   owner node['pdns']['user']
-  group node['pdns']['group']
+  group 'root'
   mode 0640
   notifies :restart, 'service[pdns]'
   variables({ 'config' => pdns_config_hash })
